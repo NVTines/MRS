@@ -1,0 +1,255 @@
+{% extends "master.html" %}
+
+{% block content %}
+<div class="hero mv-single-hero">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				
+			</div>
+		</div>
+	</div>
+</div>
+<div class="page-single movie-single movie_single">
+	<div class="container">
+		<div class="row ipad-width2">
+			<div class="col-md-4 col-sm-12 col-xs-12">
+				<div class="movie-img sticky-sb">
+					<img src="{{moviesPoster}}" alt="">
+					<div class="movie-btn">	
+						<div class="btn-transform transform-vertical red">
+							<div><a href="#" class="item item-1 redbtn"> <i class="ion-play"></i> Watch Trailer</a></div>
+							<div><a href="https://www.youtube.com/embed/o-0hcF97wy0" class="item item-2 redbtn fancybox-media hvr-grow"><i class="ion-play"></i></a></div>
+						</div>
+						<div class="btn-transform transform-vertical">
+							<div><a href="#" class="item item-1 yellowbtn"> <i class="ion-card"></i> Buy ticket</a></div>
+							<div><a href="#" class="item item-2 yellowbtn"><i class="ion-card"></i></a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-8 col-sm-12 col-xs-12">
+				<div class="movie-single-ct main-content">
+					<h1 class="bd-hd">{{moviesName}}</h1>
+					<div class="social-btn">
+						<a href="#" class="parent-btn"><i class="ion-heart"></i> Add to Favorite</a>
+						<div class="hover-bnt">
+							<a href="#" class="parent-btn"><i class="ion-android-share-alt"></i>share</a>
+							<div class="hvr-item">
+								<a href="#" class="hvr-grow"><i class="ion-social-facebook"></i></a>
+								<a href="#" class="hvr-grow"><i class="ion-social-twitter"></i></a>
+								<a href="#" class="hvr-grow"><i class="ion-social-googleplus"></i></a>
+								<a href="#" class="hvr-grow"><i class="ion-social-youtube"></i></a>
+							</div>
+						</div>		
+					</div>
+					<div class="movie-rate">
+						<div class="rate">
+							<i class="ion-android-star"></i>
+							<p><span>{{ moviesVote }}</span> /10<br>
+								<span class="rv">56 Reviews</span>
+							</p>
+						</div>
+						<div class="rate-star">
+							<p>Rate This Movie:  </p>
+							{% for i in range %}
+								<i class="ion-ios-star"></i>
+							{% endfor %}
+							{% for i in rangeUnCheck %}
+								<i class="ion-ios-star-outline"></i>
+							{%endfor%}
+						</div>
+					</div>
+					<div class="movie-tabs">
+						<div class="tabs">
+							<ul class="tab-links tabs-mv">
+								<li class="active"><a href="#overview">Overview</a></li>
+								{% comment %} <li><a href="#reviews"> Reviews</a></li> {% endcomment %}
+								{% comment %} <li><a href="#cast">  Cast & Crew </a></li>
+								<li><a href="#media"> Media</a></li>  {% endcomment %}
+								<li><a href="#moviesrelated"> Related Movies</a></li>                        
+							</ul>
+						    <div class="tab-content">
+						        <div id="overview" class="tab active">
+						            <div class="row">
+						            	<div class="col-md-8 col-sm-12 col-xs-12">
+						            		<p>{{moviesOverview}}</p>
+						            		<div class="title-hd-sm">
+												<h4>Videos & Photos</h4>
+												<a href="#" class="time">All 5 Videos & 245 Photos <i class="ion-ios-arrow-right"></i></a>
+											</div>
+											<div class="mvsingle-item ov-item">
+												<a class="img-lightbox"  data-fancybox-group="gallery" href="images/uploads/image11.jpg" ><img src="images/uploads/image1.jpg" alt=""></a>
+												<a class="img-lightbox"  data-fancybox-group="gallery" href="images/uploads/image21.jpg" ><img src="images/uploads/image2.jpg" alt=""></a>
+												<a class="img-lightbox"  data-fancybox-group="gallery" href="images/uploads/image31.jpg" ><img src="images/uploads/image3.jpg" alt=""></a>
+												<div class="vd-it">
+													<img class="vd-img" src="images/uploads/image4.jpg" alt="">
+													<a class="fancybox-media hvr-grow" href="https://www.youtube.com/embed/o-0hcF97wy0"><img src="images/uploads/play-vd.png" alt=""></a>
+												</div>
+											</div>
+											<div class="title-hd-sm">
+												<h4>cast</h4>
+												<a href="#" class="time">Full Cast & Crew  <i class="ion-ios-arrow-right"></i></a>
+											</div>
+											<!-- movie cast -->
+											<div class="mvcast-item">											
+												<div class="cast-it">
+													<div class="cast-left">
+														<img src="images/uploads/cast1.jpg" alt="">
+														<a href="#">Robert Downey Jr.</a>
+													</div>
+													<p>...  Robert Downey Jr.</p>
+												</div>
+												<div class="cast-it">
+													<div class="cast-left">
+														<img src="images/uploads/cast2.jpg" alt="">
+														<a href="#">Chris Hemsworth</a>
+													</div>
+													<p>...  Thor</p>
+												</div>
+												<div class="cast-it">
+													<div class="cast-left">
+														<img src="images/uploads/cast3.jpg" alt="">
+														<a href="#">Mark Ruffalo</a>
+													</div>
+													<p>...  Bruce Banner/ Hulk</p>
+												</div>
+												<div class="cast-it">
+													<div class="cast-left">
+														<img src="images/uploads/cast4.jpg" alt="">
+														<a href="#">Chris Evans</a>
+													</div>
+													<p>...  Steve Rogers/ Captain America</p>
+												</div>
+												<div class="cast-it">
+													<div class="cast-left">
+														<img src="images/uploads/cast5.jpg" alt="">
+														<a href="#">Scarlett Johansson</a>
+													</div>
+													<p>...  Natasha Romanoff/ Black Widow</p>
+												</div>
+												<div class="cast-it">
+													<div class="cast-left">
+														<img src="images/uploads/cast6.jpg" alt="">
+														<a href="#">Jeremy Renner</a>
+													</div>
+													<p>...  Clint Barton/ Hawkeye</p>
+												</div>
+												<div class="cast-it">
+													<div class="cast-left">
+														<img src="images/uploads/cast7.jpg" alt="">
+														<a href="#">James Spader</a>
+													</div>
+													<p>...  Ultron</p>
+												</div>
+												<div class="cast-it">
+													<div class="cast-left">
+														<img src="images/uploads/cast9.jpg" alt="">
+														<a href="#">Don Cheadle</a>
+													</div>
+													<p>...  James Rhodes/ War Machine</p>
+												</div>
+											</div>
+											<div class="title-hd-sm">
+												<h4>User reviews</h4>
+												<a href="#" class="time">See All 56 Reviews <i class="ion-ios-arrow-right"></i></a>
+											</div>
+						            	</div>
+						            	<div class="col-md-4 col-xs-12 col-sm-12">
+						            		<div class="sb-it">
+						            			<h6>Director: </h6>
+						            			<p><a href="#">Joss Whedon</a></p>
+						            		</div>
+						            		<div class="sb-it">
+						            			<h6>Writer: </h6>
+						            			<p><a href="#">Joss Whedon,</a> <a href="#">Stan Lee</a></p>
+						            		</div>
+						            		<div class="sb-it">
+						            			<h6>Stars: </h6>
+						            			<p><a href="#">Robert Downey Jr,</a> <a href="#">Chris Evans,</a> <a href="#">Mark Ruffalo,</a><a href="#"> Scarlett Johansson</a></p>
+						            		</div>
+						            		<div class="sb-it">
+						            			<h6>Genres:</h6>
+						            			<p><a href="#">{{ moviesGenre }}</a></p>
+						            		</div>
+						            		<div class="sb-it">
+						            			<h6>Release Date:</h6>
+						            			<p>May 1, 2015 (U.S.A)</p>
+						            		</div>
+						            		<div class="sb-it">
+						            			<h6>Run Time:</h6>
+						            			<p>141 min</p>
+						            		</div>
+						            		<div class="sb-it">
+						            			<h6>MMPA Rating:</h6>
+						            			<p>PG-13</p>
+						            		</div>
+						            		<div class="sb-it">
+						            			<h6>Plot Keywords:</h6>
+						            			<p class="tags">
+						            				<span class="time"><a href="#">superhero</a></span>
+													<span class="time"><a href="#">marvel universe</a></span>
+													<span class="time"><a href="#">comic</a></span>
+													<span class="time"><a href="#">blockbuster</a></span>
+													<span class="time"><a href="#">final battle</a></span>
+						            			</p>
+						            		</div>
+						            		<div class="ads">
+												<img src="images/uploads/ads1.png" alt="">
+											</div>
+						            	</div>
+						            </div>
+						        </div>
+					       	 	<div id="moviesrelated" class="tab">
+					       	 		<div class="row">
+					       	 			<h3>Related Movies To</h3>
+										<h2>{{moviesName}}</h2>
+										<h3>{{moviesGenre}}</h3>
+										<h3>{{moviesOverview}}</h3><br>
+					       	 			<div class="topbar-filter">
+											<p>Found <span>movies</span> in total</p>
+											<label>Sort by:</label>
+											<select>
+												<option value="popularity">Popularity Descending</option>
+												<option value="popularity">Popularity Ascending</option>
+												<option value="rating">Rating Descending</option>
+												<option value="rating">Rating Ascending</option>
+												<option value="date">Release date Descending</option>
+												<option value="date">Release date Ascending</option>
+											</select>
+										</div>
+										{% for idx, names, posters, overviews, genres, votes in moviesRecommend %}
+											<div class="movie-item-style-2">
+												<img src="{{ posters }}" alt="">
+												<div class="mv-item-infor">
+													<h6><a href="/detail/{{ idx }}">{{ names }}</a></h6>
+													<p class="rate"><i class="ion-android-star"></i><span>{{ votes }}</span> /10</p>
+													<p class="describe">{{ overviews }}</p>
+													<p>Genres: <a href="#">{{ genres }}</a></p>
+												</div>
+											</div>
+										{% endfor %}
+										<div class="topbar-filter">
+											<label>Movies per page:</label>
+											<select>
+												<option value="range">5 Movies</option>
+												<option value="saab">10 Movies</option>
+											</select>
+											<div class="pagination2">
+												<span>Page 1 of 2:</span>
+												<a class="active" href="#">1</a>
+												<a href="#">2</a>
+												<a href="#"><i class="ion-arrow-right-b"></i></a>
+											</div>
+										</div>
+					       	 		</div>
+					       	 	</div>
+						    </div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock %}
